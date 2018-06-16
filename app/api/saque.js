@@ -1,7 +1,6 @@
 const api = {};
 
-
-api.sacar = function (req, res) {
+api.sacar = (req, res) => {
 
   let valor = req.body.value;
   let cedula = {
