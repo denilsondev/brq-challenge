@@ -21,10 +21,10 @@ describe('Saque', () => {
         let result = res.body.reduce((total, item, index) => {
           return total + (item.valor * item.quantity)
         }, 0)
-        
+
         res.should.have.status(200);
         res.body[0].should.all.have.keys('valor', 'img', 'quantity')
-        result.should.be.equal(valorSaque.value)
+        result.should.be.equal(valorSaque.value) // Soma do valor das notas retornadas deve ser igual ao valor de saque.
 
         done();
 
