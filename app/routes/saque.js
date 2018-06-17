@@ -2,7 +2,7 @@ module.exports = (app) => {
   const api = app.api.saque;
 
   // Add headers
-app.use(function (req, res, next) {
+app.use( (req, res, next) => {
 
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -14,6 +14,5 @@ app.use(function (req, res, next) {
 
   app.route('/v1/saque')
     .post(api.sacar);
-
 }
 
