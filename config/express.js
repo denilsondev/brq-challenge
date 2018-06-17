@@ -5,6 +5,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
+
 consign({cwd: 'app'})
   .include('api')
   .then('routes')
