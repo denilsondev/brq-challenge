@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="title">
+    {{title}}
+  </h1>
+  <form #saqueForm="ngForm" novalidate>
+    <div class="form-group">
+      <label for="valorSaque">Valor do Saque</label>
+      <input type="number" name="value" #iptValor="ngModel" class="form-control" placeholder="Digite o valor so saque." required
+        ngModel/>
+    </div>
+    <button [disabled]="saqueForm.invalid" type="submit" (click)="sacar(saqueForm.value)" class="btn btn-primary">Sacar</button >
+</form>
+<app-alert *ngIf="error"></app-alert>
+<div *ngIf="!error" class="row">
+    <div class="col-md-3 box-nota" *ngFor="let cedula of notas">
+      <img [src]="cedula.img" class="cedula"  alt="cedula.description">
+      <p *ngIf="cedula.quantity > 1"> {{cedula.quantity}} notas de R${{cedula.valor}},00 <p>
+      <p *ngIf="cedula.quantity < 2"> {{cedula.quantity}} nota de R${{cedula.valor}},00 <p>
+    </div>
+</div>
+
+</div>
