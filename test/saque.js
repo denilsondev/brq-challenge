@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 
 describe('Saque', () => {
 
-  it('Efetuar saque com sucesso.', (done) => {
+  it('Efetuar saque.', (done) => {
 
     let valorSaque = {
       value: 550
