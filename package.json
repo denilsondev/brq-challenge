@@ -4,7 +4,8 @@
   "description": "teste da BRQ",
   "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "nodemon server.js"
   },
   "author": "Denilson Carvalho",
   "license": "ISC",
